@@ -48,8 +48,9 @@ name: Content Generation Pipeline
 
 on:
   schedule:
-     - cron: '0 * * * *'       # runs every 1 hour
-  workflow_dispatch:
+    - cron: "0 */1 * * *"  
+  workflow_dispatch: # Allows manual trigger
+
 
 jobs:
   generate-content:
