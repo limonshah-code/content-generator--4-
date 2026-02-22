@@ -43,11 +43,12 @@
 #           git add generated-content/
 #           git commit -m "chore: add generated content [skip ci]" || echo "No changes to commit"
 #           git push
+
 name: Content Generation Pipeline
 
 on:
   schedule:
-    - cron: '*/5 * * * *'   # temporary test (every 5 min)
+     - cron: '0 * * * *'       # runs every 1 hour
   workflow_dispatch:
 
 jobs:
